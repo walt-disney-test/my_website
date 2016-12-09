@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron|Righteous" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+  <link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="js/jquery.quovolver.js"></script>
+  <script src="http://vjs.zencdn.net/5.8.8/video.js"></script>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Nikki's Website</h1>
+      </header>
+
+      <ul id="nav">
+        <li><a href="biography.html">Biography</a></li>
+        <li><a href="history_report.html">History Report</a></li>
+        <li><a href="science_project.html">Science Project</a></li>
+      </ul>
+
+      <div id="quiz">
+        <h2>Lincoln Quiz</h2>
+        <div>
+          <p id="question-one-question">What state was Abraham Lincoln Born?</p>
+          <p id="question-one-solution">He was born in Kentucky.</p>
+          <p id="question-two-question">How tall was Abraham Lincoln?</p>
+          <p id="question-two-solution">He was 6ft 4inches tall.</p>
+        </div>
+      </div>
+
+      <div id="biography">
+        <h2>Biography of Abraham Lincoln</h2>
+        <div id=video-container>
+          <video id="my-video" class="video-js" controls preload="auto" width="460" height="300" data-setup="{}">
+            <source src="video/lincoln.mp4" type='video/mp4'>
+          </video>
+        </div>
+        <p>Abraham Lincoln came from modest beginnings, being born in a log cabin in 1809. Mainly self-educated, he became a lawyer, and later elected to the Illinois House of Representatives.</p>
+        <p>He became the 16th president of the United States, when the country tore itself apart due to slavery.</p>
+        <p>His greatest accomplishments are the <a href="https://en.wikipedia.org/wiki/Thirteenth_Amendment_to_the_United_States_Constitution">13th Ammendment</a> and winning the Civil War against the South, keeping the country together.</p>
+        
+      </div>
+      <div id=quote-container>
+        <div id="quotes">
+          <blockquote>
+          <p>“Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.”</p>
+          <p>— November 19, 1863 Gettysburg Address</p>
+          </blockquote>
+
+          <blockquote>
+          <p>“The man does not live who is more devoted to peace than I am. None who would do more to preserve it.”</p>
+          <p>— February 21, 1861 Address to the New Jersey General Assembly</p>
+          </blockquote>
+
+          <blockquote>
+          <p>“In times like the present, men should utter nothing for which they would not willingly be responsible through time and eternity.”</p>
+          <p>— December 1, 1862 Message to Congress</p>
+          </blockquote>
+        </div><!-- .quotes -->
+      </div>
+      <footer>Copyright ©2016</footer>
+    </div>
+    <script type="text/javascript">
+      $("#question-one-question").click(function(){
+        $("#question-one-solution").show(); // later change to slideDown();
+      });
+      $("#question-two-question").click(function(){
+        $("#question-two-solution").show(); // later change to slideDown();
+      });
+
+      $('#quotes').quovolver();
+    </script>
+  </body>
+</html>
